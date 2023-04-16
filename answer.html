@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Answer Button</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding-top: 50px;
+		}
+		h1 {
+			color: #333;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Magic Answer Button</h1>
+	<label for="question">What is your question?</label>
+	<input type="text" id="question">
+	<br>
+	<br>
+	<button onclick="getAnswer()">Get answer</button>
+	<p id="answer"></p>
+	<script>
+		function getAnswer() {
+			var answers = [
+				"It is certain.",
+				"It is decidedly so.",
+				"Without a doubt.",
+				"Yes – definitely.",
+				"You may rely on it.",
+				"As I see it, yes.",
+				"Most likely.",
+				"Outlook good.",
+				"Yes.",
+				"Signs point to yes.",
+				"Reply hazy, try again.",
+				"Ask again later.",
+				"Better not tell you now.",
+				"Cannot predict now.",
+				"Concentrate and ask again.",
+				"Don't count on it.",
+				"Outlook not so good.",
+				"My sources say no.",
+				"Very doubtful.",
+				"I think you should consider it.",
+				"I would never ever recommend that to anyone.",
+				"oh my, that's a great idea.",
+				"what? Are you stupid or something?",
+				"I think you should go with it",
+				"That must be the most ridiculous idea that I have ever encountered",
+				"Hell yes, just do it already",
+				"You gotta be kidding me",
+				"This is actually good you know",
+				"You know what? I would leave that for you.",
+
+			];
+			var answer = answers[Math.floor(Math.random() * answers.length)];
+			document.getElementById("answer").innerHTML = answer;
+		}
+	</script>
+</body>
+</html>
